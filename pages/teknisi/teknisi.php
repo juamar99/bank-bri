@@ -9,7 +9,7 @@
 <div class="my-2"></div>
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Data Tukang</h6>
+        <h6 class="m-0 font-weight-bold text-primary">Data Teknisi</h6>
     </div>
     <div class="card-body">
         <div class="table-responsive">
@@ -17,10 +17,9 @@
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>Jenis Jasa</th>
-                        <th>Layanan</th>
-                        <th>Keterangan</th>
-                        <th>Harga Jasa</th>
+                        <th>Nama</th>
+                        <th>Nomor Hp</th>
+                        <th>Alamat</th> 
                         <th>Aksi</th>
                     </tr>
                 </thead>
@@ -30,7 +29,6 @@
                         <td>Saya</td>
                         <td>Kupang</td>
                         <td>082283739229</td>
-                        <td>Rp.800.000</td>
                         <td>
                             <a href="detail-teknisi"><button class="btn btn-primary btn-sm col-sm-10" type="submit"
                                     name="terima_judul"><i class="fa fa-eye"></i> Detail</button>
