@@ -52,7 +52,7 @@
     </li>
     <hr class="sidebar-divider" />
     <li class="nav-item">
-        <a class="nav-link" href="costumer">
+        <a class="nav-link" href="user">
             <i class="fas fa-user"></i>
             <span>USER</span></a>
     </li>

@@ -1,7 +1,15 @@
+<div class="pull-right">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">
+        <span class="icon text-white-50">
+            <i class="fas fa-plus"></i>
+        </span>
+        <span class="text">Tambah Data User</span>
+    </button>
+</div>
 <div class="my-2"></div>
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Data Costumer</h6>
+        <h6 class="m-0 font-weight-bold text-primary">Data User</h6>
     </div>
     <div class="card-body">
         <div class="table-responsive">
@@ -10,8 +18,8 @@
                     <tr>
                         <th>No</th>
                         <th>Nama</th>
-                        <th>No.Hp</th>
-                        <th>Email</th>
+                        <th>Username</th>
+                        <th>password</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
@@ -43,4 +51,7 @@
         </div>
     </div>
 </div>
-<?php require_once 'form_ubah_costumer.php'; ?>
+<?php 
+    require_once 'form_ubah_user.php'; 
+    require_once 'form_tambah_user.php'; 
+?>

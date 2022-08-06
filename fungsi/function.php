@@ -3,35 +3,35 @@ function halaman($page)
 {
     try {
         switch ($page) {
-            case 'atm':
+            case 'atm' :
                 $page = './pages/atm/atm.php';
                 break;
-            case 'detail-atm':
+            case 'detail-atm' :
                 $page = './pages/atm/detail.php';
                 break;
-            case 'edc':
+            case 'edc' :
                 $page = './pages/edc/edc.php';
                 break;
-            case 'detail-edc':
+            case 'detail-edc' :
                 $page = './pages/edc/detail.php';
                 break;
-            case 'kerusakan':
+            case 'kerusakan' :
                 $page = './pages/kerusakan/kerusakan.php';
                 break;
-            case 'detail-kerusakan':
+            case 'detail-kerusakan' :
                 $page = './pages/kerusakan/detail.php';
-                break;
-            case 'costumer':
-                $page = './pages/costumer/costumer.php';
-                break;
-            case 'detail-costumer':
-                $page = './pages/costumer/detail.php';
                 break;
             case 'teknisi':
                 $page = './pages/teknisi/teknisi.php';
                 break;
-            case 'detail-teknisi':
+            case 'detail-teknisi' :
                 $page = './pages/teknisi/detail.php';
+                break;
+            case 'user' :
+                $page = './pages/user/user.php';
+                break;
+            case 'detail-user' :
+                $page = './pages/user/detail.php';
                 break;
             default:
                 $page = './pages/main/main.php';
