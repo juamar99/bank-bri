@@ -30,7 +30,7 @@
                         <td>08262263797</td>
                         <td>cs@gmail.com</td>
                         <td>
-                            <a href="detail-costumer"><button class="btn btn-primary btn-sm col-sm-10" type="submit"
+                            <a href="detail-user"><button class="btn btn-primary btn-sm col-sm-10" type="submit"
                                     name="terima_judul"><i class="fa fa-eye"></i> Detail</button>
                             </a>
                             <div class="my-2"></div>
@@ -51,7 +51,7 @@
         </div>
     </div>
 </div>
-<?php 
-    require_once 'form_ubah_user.php'; 
-    require_once 'form_tambah_user.php'; 
+<?php
+require_once 'form_ubah_user.php';
+require_once 'form_tambah_user.php';
 ?>
