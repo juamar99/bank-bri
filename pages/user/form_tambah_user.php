@@ -16,11 +16,12 @@
                     </div>
                     <div class="form-group">
                         <label>Username</label>
-                        <input type="text" autocomplete="off" placeholder="Username Untuk Log In Aplikasi" class="form-control" name="no_hp">
+                        <input type="text" autocomplete="off" placeholder="Username Untuk Log In Aplikasi"
+                            class="form-control" name="no_hp">
                     </div>
                     <div class="form-group">
                         <label>Password</label>
-                        <input type="password" autocomplete="off"  class="form-control" name="no_hp">
+                        <input type="password" autocomplete="off" class="form-control" name="no_hp">
                     </div>
                     <div class="modal-footer">
                         <button class="btn btn-primary btn-sm" type="submit" name="simpan_tukang">
