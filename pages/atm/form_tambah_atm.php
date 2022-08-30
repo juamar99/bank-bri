@@ -59,6 +59,7 @@ VALUES('','$sn_atm','$alamat','$kerusakan','$tipe')");
     if ($insert) {
         echo "<script>
 alert('data berhasil disimpan ');
+window.location.replace('atm');
 </script>";
     } else {
         echo "<script>
