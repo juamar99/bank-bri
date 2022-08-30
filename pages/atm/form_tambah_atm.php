@@ -1,5 +1,5 @@
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-    aria-hidden="true">
+<div class="modal fade bd-example-modal-lg<?= $data['sn_atm']; ?>" tabindex="-1" role="dialog"
+    aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
@@ -47,7 +47,6 @@
 </div>
 
 <?php
-include_once '../bank-bri/fungsi/koneksi.php';
 
 if (isset($_POST['simpan_atm'])) {
     $sn_atm = $_POST['sn_atm'];
