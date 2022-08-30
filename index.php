@@ -1,11 +1,12 @@
-<?php 
-    require_once 'fungsi/function.php';
-    if(isset($_GET['page'])) :
-        $hal=trim($_GET['page']);
-        $page = halaman($hal);
-    else :
-        $page = halaman('beranda');
-    endif;
+<?php
+include_once 'fungsi/koneksi.php';
+require_once 'fungsi/function.php';
+if (isset($_GET['page'])) :
+    $hal = trim($_GET['page']);
+    $page = halaman($hal);
+else :
+    $page = halaman('beranda');
+endif;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +21,7 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
         <!-- Sidebar -->
-        <?php include "./template/sidebar.php";?>
+        <?php include "./template/sidebar.php"; ?>
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -34,8 +35,8 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                    <?php 
-                      include $page;
+                    <?php
+                    include $page;
                     ?>
                 </div>
                 <!-- /.container-fluid -->

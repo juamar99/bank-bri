@@ -19,33 +19,47 @@
                         <th>No</th>
                         <th>Nomor Seri Atm</th>
                         <th>Alamat</th>
+                        <th>Kerusakan</th>
                         <th>Tipe</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
+                    <?php
+                    $query = mysqli_query($koneksi, "SELECT * FROM atm") or mysqli_error($koneksi);
+                    $no = 1;
+                    while ($data = mysqli_fetch_assoc($query)) {
+
+                    ?>
                     <tr>
-                        <td>1</td>
-                        <td>Saya</td>
-                        <td>Kupang</td>
-                        <td>082283739229</td>
+                        <td><?= $no++; ?></td>
+                        <td><?= $data['sn_atm']; ?></td>
+                        <td><?= $data['alamat']; ?></td>
+                        <td><?= $data['kerusakan']; ?></td>
+                        <td><?= $data['tipe']; ?></td>
                         <td>
                             <a href="detail-atm"><button class="btn btn-primary btn-sm col-sm-10" type="submit"
                                     name="terima_judul"><i class="fa fa-eye"></i> Detail</button>
                             </a>
                             <div class="my-2"></div>
                             <button type="button" class="btn btn-success btn-sm col-sm-10" data-toggle="modal"
-                                data-target=".ubah-data-modal-lg">
+                                data-target="#ubah-data-modal-lg<?= $data['sn_atm']; ?>">
                                 <span class="icon text-white-50">
                                     <i class="fas fa-edit"></i>
                                 </span>
                                 <span class="text">Ubah</span>
                             </button>
                             <div class="my-2"></div>
-                            <button class="btn btn-danger btn-sm col-sm-10" type="submit" name="tolak_judul"><i
-                                    class="fa fa-trash"></i> Hapus</button>
+
+                            <a href="atm&id_atm=<?= $data['id_atm']; ?>"><button class="btn btn-danger btn-sm col-sm-10"
+                                    type="submit" name="hapus_data"><i class="fa fa-trash"></i> Hapus</button></a>
+                            <form action="" method="GET">
+                            </form>
+
                         </td>
                     </tr>
+                    <?php include "form_ubah_atm.php";
+                    } ?>
                 </tbody>
             </table>
         </div>
@@ -53,5 +67,19 @@
 </div>
 <?php
 include "form_tambah_atm.php";
-include "form_ubah_atm.php";
+if (isset($_GET['id_atm'])) {
+    $id_atm = $_GET['id_atm'];
+    $query_hapus = mysqli_query($koneksi, "DELETE FROM atm WHERE id_atm='$id_atm'")
+        or die('Ada kesalahan pada query delete : ' . mysqli_error($koneksi));
+    if ($query_hapus) {
+        echo "<script>
+    alert('data berhasil dihapus ');
+    </script>";
+    } else {
+        echo "<script>
+    alert('data gagal idhapus ');
+    </script>";
+    }
+}
+
 ?>
