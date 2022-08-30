@@ -32,8 +32,8 @@
                     </div>
                     <div class="form-group">
                         <label>Alamat</label>
-                        <textarea class="form-control" rows="2" name="alamat" placeholder="ALAMAT" autocomplete="off"
-                            required>
+                        <textarea type="text-area" class="form-control" rows="2" name="alamat" placeholder="ALAMAT"
+                            autocomplete="off" required>
                             <?= $data['alamat']; ?></textarea>
                     </div>
                     <div class="modal-footer">
@@ -61,8 +61,8 @@ if (isset($_POST['ubah_atm'])) {
     if ($update) {
         //      echo '<script>window.location="atm"</script>';
         echo "<script>
-        alert('data berhasil diubah ');
-        window.location.reload();
+        alert('data berhasil diubah');
+        window.location.replace('atm');
         </script>";
     } else {
         echo "<script>

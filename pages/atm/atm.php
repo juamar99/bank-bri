@@ -74,6 +74,7 @@ if (isset($_GET['id_atm'])) {
     if ($query_hapus) {
         echo "<script>
     alert('data berhasil dihapus ');
+    window.location.replace('atm');
     </script>";
     } else {
         echo "<script>
